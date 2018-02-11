@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>国家政策详情</title>
+	<link rel="stylesheet" type="text/css" href="../../libs/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="../../common/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../common/common.css">
+	<link rel="stylesheet" type="text/css" href="./policy.css">
+	<meta charset="utf-8">
+</head>
+<body>
+<div class="container">
+	<div class="tab-title">
+		<div class="logo"><a href="../index/index.html"><img src="../../images/index-logo.png"></a></div>
+		<div class="tab-item">
+			<ul>
+				<li><a href="../index/index.html">首页</a><i></i></li>
+				<li><a href="../intro/intro.html">项目介绍</a><i></i></li>
+				<li><a href="../product/product.html">产品介绍</a><i></i></li>
+				<li><a href="../specialist/specialist.html">专家团队</a><i></i></li>
+				<li><a href="../news/news.html">企业新闻</a><i></i></li>
+				<li class="active"><a href="policy.html">国家政策</a><i></i></li>
+				<li><a href="../introduction/introduction.html">公司介绍</a><i></i></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="banner">
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	    </div>
+	    <!-- Add Pagination -->
+	    <div class="swiper-pagination"></div>
+  	</div>
+</div>
+
+
+<div class="specialist-location">
+	<p>
+		<span>您的位置：</span>
+		<span>首页 ></span>
+		<span>国家政策 ></span>
+		<span>国家政策</span>
+	</p>
+</div>
+
+<div class="policy">
+	<h4></h4>
+	<time></time>
+	<div></div>
+</div>
+
+<style>
+
+</style>
+
+<iframe src="../footer/footer.html" width="100%" frameborder="0" height="448px"></iframe>
+       
+       
+
+
+</body>
+</html>
+<script src="../../libs/jquery.js"></script>
+<script src="../../libs/swiper-3.4.2.min.js"></script>
+<script src="../../common/public.js"></script>
+<script src="../../common/dome.js"></script>
+
+<script type="text/javascript">
+$(function(){
+
+	//banner轮播
+	subpageBanner( 6 )
+
+	var Request = new Object();
+	Request = GetRequest();
+	var cid = Request["cId"];
+	
+
+	yDataAjax( url+"chengtou/api/news/getDetail" , "get" , {
+		id : cid
+	} ,function( data ){
+
+		if( data.status == 0 )
+		{
+			$('.policy h4').html(data.data.c_profile)
+			$('.policy time').html(data.data.c_createtime)
+			$('.policy div').html(data.data.c_desc)
+			console.log( data )
+		}
+
+	})
+
+})
+
+
+
+
+</script>

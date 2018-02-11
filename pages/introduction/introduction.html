@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>公司介绍</title>
+	<link rel="stylesheet" type="text/css" href="../../libs/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="../../common/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../common/common.css">
+	<link rel="stylesheet" type="text/css" href="./introduction.css">
+	<meta charset="utf-8">
+</head>
+<body>
+<div class="container">
+	<div class="tab-title">
+		<div class="logo"><a href="../index/index.html"><img src="../../images/index-logo.png"></a></div>
+		<div class="tab-item">
+			<ul>
+				<li><a href="../index/index.html">首页</a><i></i></li>
+				<li><a href="../intro/intro.html">项目介绍</a><i></i></li>
+				<li><a href="../product/product.html">产品介绍</a><i></i></li>
+				<li><a href="../specialist/specialist.html">专家团队</a><i></i></li>
+				<li><a href="../news/news.html">企业新闻</a><i></i></li>
+				<li><a href="../policy/policy.html">国家政策</a><i></i></li>
+				<li class="active"><a href="introduction.html">公司介绍</a><i></i></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="banner">
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	    </div>
+	    <!-- Add Pagination -->
+	    <div class="swiper-pagination"></div>
+  	</div>
+</div>
+
+
+<div class="specialist-location">
+	<p>
+		<span>您的位置：</span>
+		<span>首页 ></span>
+		<span>公司介绍</span>
+	</p>
+</div>
+<div class="specialist">
+	<div class="title"><h1>公司介绍</h1><i>/</i><span>INTRODUCTION</span></div>
+	<div class="content"></div>
+	<!--<div class="introduction">
+ 		<span><img src="../../images/introduction_img1.jpg" alt=""></span>
+<div>
+	<p>位于上海嘉定浏翔公路1111弄，是一家集运输、仓储、配送于一体的综合性物流公司。经过多年不懈的努力，公司已在珠三角地区，长三角地区和京津地区的主要城市设立了分公司和办事处，形成了辐射面广的主干网络，仓储总面积5000平方米，自有及合作车辆近百台，具有较强的经济实力。</p>
+	<p>企业文化“优质、高效、诚信、超越”，要知道创造企业核心竞争力的是每一位香飞人。我们以人为本，建立属于我们香飞自己的学习型组织，创造和谐、沟通、高效的工作氛围。</p>
+	<p>信誉第一、服务至上、创新高效、再创辉煌 公司的质量方针，既浓缩了顾客对公司的期望和要求，体现了员工对顾客的承诺，又包含了全体员工所认同的企业精神、管理目标和长远追求。 </p>
+	<p>信誉第一、服务至上、创新高效、再创辉煌 公司的质量方针，既浓缩了顾客对公司的期望和要求，体现了员工对顾客的承诺，又包含了全体员工所认同的企业精神、管理目标和长远追求。 </p>
+	<p>信誉第一、服务至上、创新高效、再创辉煌 公司的质量方针，既浓缩了顾客对公司的期望和要求，体现了员工对顾客的承诺，又包含了全体员工所认同的企业精神、管理目标和长远追求。 </p>
+</div>
+	</div>
+	<ul>
+<li>
+	<h4>企业理念<span>Our idea</span></h4>
+	<p>建立充满活力、积极进取、开拓创新的战斗团队成为顾客心目中信赖和尊敬的专家，成就每位成员都能获得成长的学习型企业 </p>
+</li>
+<li>
+	<h4>企业理念<span>Our idea</span></h4>
+	<h5>以领先的“咨询＋IT”服务模式，引领信息化管理之路，提高企业核心竞争力！</h5>
+	<p>经营范围：长途货运、短途运输、物流运输配送及铁路运输配送、货物包装等服务为一体的现代化物流增值的上海货运机构，货运网点遍及全国各地一百多个大、中、小城市，现拥有：货运自备车，合同运输车辆共100多台，车型分别有大、中、小型以及不同种类的特种车辆等，能够承接：上海及周边地区到全国各地整车、零担、大件货物运输业务。 </p>
+</li>
+	</ul> -->
+</div>
+
+<style>
+
+</style>
+
+<iframe src="../footer/footer.html" width="100%" frameborder="0" height="448px"></iframe>
+
+       
+       
+
+
+</body>
+</html>
+<script src="../../libs/jquery.js"></script>
+<script src="../../libs/swiper-3.4.2.min.js"></script>
+<script src="../../common/public.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	
+	//banner轮播
+	subpageBanner( 7 )
+
+	nDataAjax( url+"chengtou/api/home/conpanyinfo" , "get"  ,function( data ){
+
+		if( data.status == 0 )
+		{
+			$('.specialist .content').html(data.data)
+			console.log( data )
+		}
+
+	})
+
+	
+
+
+
+ })
+
+
+
+</script>

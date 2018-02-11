@@ -1,0 +1,147 @@
+html,body {
+	/* font-size:20px; */
+	overflow-x: hidden;
+	font-family: '微软雅黑';
+	color: #666666;
+}
+.container{
+	width: 1200px;
+	min-width: 1200px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+
+.swiper-pagination-bullet{
+	width: 10px;
+	height: 10px;
+	border: 1px solid #fff;
+	background: none;
+}
+.swiper-pagination-bullet-active{
+	background: #fff;
+}
+
+.tab-title{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 80px;
+	/* background-color: pink; */
+}
+.tab-title .logo{
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	padding-top: 16px;
+}
+.tab-title .logo img{
+	width: 123px;
+}
+.tab-title .tab-item{
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.tab-title .tab-item ul{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	line-height: 80px;
+}
+
+.tab-title .tab-item ul li{
+	position: relative;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	font-size: 16px;
+	text-align: center;
+}
+
+.tab-title .tab-item ul li a{
+	color: #666666;
+}
+.tab-title .tab-item ul li.active a{
+	color: #00b0ec;
+}
+
+
+.tab-title .tab-item ul li.active i{
+	position: absolute;
+	width: 60%;
+	left: 0;
+	top: 0;
+	border-bottom: 2px solid #00b0ec;
+	-webkit-transform: translate(20px, 78px);
+	        transform: translate(20px, 78px);
+}
+
+.banner .swiper-wrapper img{
+	width: 100%;
+}
+
+
+footer{
+	background: #f7f7f7;
+	margin-top: 70px;
+}
+footer .contact{
+	width: 1200px;
+	min-width: 1200px;	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin: 0 auto;
+	padding: 30px 0;
+
+}
+footer .contact .contact-way{
+	background: url('../../images/contact_wayBg.png') right center no-repeat;
+	flex: 1;
+}
+footer .contact .contact-way h6{
+	font-size: 18px;
+	color: #333333;
+	font-weight: normal;
+	padding-bottom: 10px;
+}
+footer .contact .contact-way ul{
+	font-size: 16px; 
+	color: #666666;
+}
+footer .contact .contact-way ul li{
+	padding-bottom: 14px;
+}
+footer .contact .contact-code{
+	flex: 1;
+}
+footer .contact .contact-code span{
+	overflow: hidden;
+	display: block;
+}
+footer .contact .contact-code span img{
+	float: right;
+	padding-right: 10px;
+}
+footer .contact .contact-code p{
+	text-align: right;
+	padding-top: 20px;
+	font-size: 16px;
+	color: #666666;
+}
+footer .annotation{
+	text-align: center;
+	font-size: 14px;
+	color: #666666;
+	width: 1200px;
+	min-width: 1200px;
+	border-top: 1px solid #c8c8c8;
+	padding: 30px 0;
+	margin: 0 auto;
+	line-height: 24px;
+}
+

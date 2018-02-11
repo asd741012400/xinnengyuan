@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>产品介绍详情</title>
+	<link rel="stylesheet" type="text/css" href="../../libs/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="../../common/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../common/common.css">
+	<link rel="stylesheet" type="text/css" href="./product.css">
+	<meta charset="utf-8">
+</head>
+<body>
+<div class="container">
+	<div class="tab-title">
+		<div class="logo"><a href="../index/index.html"><img src="../../images/index-logo.png"></a></div>
+		<div class="tab-item">
+			<ul>
+				<li><a href="../index/index.html">首页</a><i></i></li>
+				<li><a href="../intro/intro.html">项目介绍</a><i></i></li>
+				<li class="active"><a href="product.html">产品介绍</a><i></i></li>
+				<li><a href="../specialist/specialist.html">专家团队</a><i></i></li>
+				<li><a href="../news/news.html">企业新闻</a><i></i></li>
+				<li><a href="../policy/policy.html">国家政策</a><i></i></li>
+				<li><a href="../introduction/introduction.html">公司介绍</a><i></i></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="banner">
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	    </div>
+	    <!-- Add Pagination -->
+	    <div class="swiper-pagination"></div>
+  	</div>
+</div>
+
+
+<div class="product-location">
+	<p>
+		<span>您的位置：</span>
+		<span>首页 ></span>
+		<span>产品介绍 ></span>
+		<span>产品大全</span>
+	</p>
+</div>
+<div class="product" style="display: none;">
+	<div class="product-tab">
+		<div class="title"><h1>产品大全</h1><i>/</i><span>product</span></div>
+		<ul>
+			<li class="active">全部</li>
+			<li>酯醚燃料</li>
+			<li>醇醚燃料</li>
+			<li>工业乙醇</li>
+			<li>增溶剂</li>
+			<li>脱硝清洁剂</li>
+		</ul>
+	</div>
+	
+</div>
+<div class="product-content-details">
+	<div class="title"><h1></h1></div>
+	<div class="content">
+		<div class="technology">
+			<h4>技术标准</h4>
+			<div></div>
+		</div>
+		<div class="product-content">
+			<h4>产品介绍</h4>
+			<div></div>
+		</div>
+	</div>
+</div>
+<style>
+
+</style>
+
+<iframe src="../footer/footer.html" width="100%" frameborder="0" height="448px"></iframe>
+
+       
+       
+
+
+</body>
+</html>
+<script src="../../libs/jquery.js"></script>
+<script src="../../libs/swiper-3.4.2.min.js"></script>
+<script src="../../common/public.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+	subpageBanner( 3 )
+
+	var Request = new Object();
+	Request = GetRequest();
+	var cid = Request["cId"];
+
+	yDataAjax( url+"chengtou/api/product/getDetail" , "get" , {
+		id : cid
+	} , function( data ){
+
+		if( data.status == 0 )
+		{
+			
+			$('.product-content-details .title h1').html( data.data.c_productname )
+			$('.product-content-details .content .product-content div').html( data.data.c_desc )
+
+
+			$('.product-content-details .content .technology div').html( data.data.devlopinfo.c_content )
+		}
+	})
+
+})
+
+
+</script>

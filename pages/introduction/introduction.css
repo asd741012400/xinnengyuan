@@ -1,0 +1,97 @@
+.specialist-location{
+	width: 1200px;
+	min-width: 1200px;
+	margin: 0 auto;
+	text-align: right;
+	line-height: 74px;
+	border-bottom: 1px dashed #e5e5e5;
+}
+.specialist-location span:last-child{
+	color: #00b0ec;
+}
+
+
+.specialist{
+	width: 1200px;
+	min-width: 1200px;
+	margin: 0 auto;
+}
+.figure-details{
+	width: 1200px;
+	min-width: 1200px;
+	margin: 0 auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.specialist .title{ 
+	
+	color: #333333; 
+	overflow: hidden;
+	line-height: 82px;
+	flex: 1;
+}
+.specialist .title h1{
+	font-size: 22px;
+	float: left;
+	font-weight: normal;
+}
+.specialist .title i{
+	font-style: normal;
+	padding: 0 6px;
+	float: left;
+}
+.specialist .title span{
+	float: left;
+	font-size: 16px;
+	color: #666666;
+}
+.specialist .introduction{
+	overflow: hidden;
+}
+/* .specialist .introduction span{
+	float: left;
+	padding-right: 30px;
+}
+.specialist .introduction div{
+	line-height: 24px;
+	font-size: 16px;
+}
+.specialist .introduction div p{
+	padding-bottom: 20px;
+} */
+.specialist ul{
+	margin-top: 10px;
+}
+.specialist ul li{
+	border-bottom: 1px dashed #e5e5e5;
+	padding-bottom: 20px;
+}
+.specialist ul li h4{
+	font-weight: normal;
+	font-size: 18px;
+	color: #333333;
+	padding-top: 20px;
+}
+.specialist ul li h4 span{
+	font-size: 16px;
+	color: #666666;
+	padding-left: 10px;
+}
+.specialist ul li h5{
+	font-size: 16px;
+	font-weight: normal;
+	color: #666666;
+	padding-top: 20px;
+}
+.specialist ul li p{
+	font-size: 16px;
+	color: #666666;
+	padding-top: 40px;
+	line-height: 24px;
+}
+footer{
+	margin-top: 40px;
+}

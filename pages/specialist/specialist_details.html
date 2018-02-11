@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>专家团队详情</title>
+	<link rel="stylesheet" type="text/css" href="../../libs/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="../../common/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../common/common.css">
+	<link rel="stylesheet" type="text/css" href="./specialist.css">
+	<meta charset="utf-8">
+</head>
+<body>
+<div class="container">
+	<div class="tab-title">
+		<div class="logo"><a href="../index/index.html"><img src="../../images/index-logo.png"></a></div>
+		<div class="tab-item">
+			<ul>
+				<li><a href="../index/index.html">首页</a><i></i></li>
+				<li><a href="../intro/intro.html">项目介绍</a><i></i></li>
+				<li><a href="../product/product.html">产品介绍</a><i></i></li>
+				<li class="active"><a href="specialist.html">专家团队</a><i></i></li>
+				<li><a href="../news/news.html">企业新闻</a><i></i></li>
+				<li><a href="../policy/policy.html">国家政策</a><i></i></li>
+				<li><a href="../introduction/introduction.html">公司介绍</a><i></i></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="banner">
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	    </div>
+	    <!-- Add Pagination -->
+	    <div class="swiper-pagination"></div>
+  	</div>
+</div>
+
+
+<div class="specialist-location">
+	<p>
+		<span>您的位置：</span>
+		<span>首页 ></span>
+		<span>项目介绍 ></span>
+		<span>专家团队</span>
+	</p>
+</div>
+
+<div class="specialist-details">
+	<div class="specialist-details-content">
+		<b></b>
+		<div>
+			<h1></h1>
+			<strong></strong>
+		</div>
+	</div>
+	<ul>
+	</ul>
+</div>
+<style>
+
+</style>
+
+<iframe src="../footer/footer.html" width="100%" frameborder="0" height="448px"></iframe>
+
+       
+       
+
+
+</body>
+</html>
+<script src="../../libs/jquery.js"></script>
+<script src="../../libs/swiper-3.4.2.min.js"></script>
+<script src="../../common/public.js"></script>
+<script type="text/javascript">
+
+
+$(function(){
+	subpageBanner( 4 )
+
+
+	var Request = new Object();
+	Request = GetRequest();
+	var cid = Request["cId"];
+
+	yDataAjax( url+"chengtou/api/team/getDetail" , "get" , {
+		id : cid
+	} , function( data ){
+
+		if( data.status == 0 )
+		{
+			$('.specialist-details-content b').html(`<img src="${data.data.c_headimgurl}" alt="">`)
+			$('.specialist-details-content div h1').html(`<span>${data.data.c_name}</span><i>/</i><em>${data.data.c_position}</em>`)
+			$('.specialist-details-content div strong').append(data.data.c_desc)
+
+			if( data.data.linklist )
+			{
+				$.each(data.data.linklist, function(index, val) {
+					$('.specialist-details ul').append(
+						`<li cid="${val.c_id}">
+							<a href="${val.c_linkurl}">${val.c_title}</a>
+							<p>${val.c_desc}</p>
+						</li>`)
+
+				});
+			}
+			console.log( data )
+
+		}
+	})
+})
+
+
+</script>

@@ -1,0 +1,124 @@
+.product-location{
+	width: 1200px;
+	min-width: 1200px;
+	margin: 0 auto;
+	text-align: right;
+	line-height: 74px;
+	border-bottom: 1px dashed #e5e5e5;
+}
+.product-location span:last-child{
+	color: #00b0ec;
+}
+
+
+.product-tab{
+	width: 1200px;
+	min-width: 1200px;
+	margin: 0 auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding: 20px 0;
+}
+.product-tab .title{
+	color: #333333;
+	overflow: hidden;
+	line-height: 40px;
+	flex: 1;
+}
+.product-tab .title h1{
+	font-size: 22px;
+	float: left;
+	font-weight: normal;
+}
+.product-tab .title i{
+	font-style: normal;
+	padding: 0 6px;
+	float: left;
+}
+.product-tab .title span{
+	float: left;
+	font-size: 22px;
+	color: #666666;
+}
+.product-tab ul{
+	overflow: hidden;
+	line-height: 40px;
+	width: 894px;
+}
+.product-tab ul li{
+	float: left;
+	padding-left: 50px;
+}
+.product-tab ul li a{
+	color: #333333;
+}
+.product-tab ul li.active a{
+	color: #00b0ec;
+}
+
+
+.product-content{
+	width: 1200px;
+	min-width: 1200px;
+	margin: 0 auto;
+}
+.product-content ul{
+	overflow: hidden;
+	margin-top: -40px;
+}
+.product-content ul li{
+	float: left;
+	width: 247px;
+	margin-right: 70px;
+	margin-top: 40px;
+	cursor:pointer
+}
+.product-content ul li:nth-of-type(4n){
+	margin-right: 0;
+}
+.product-content ul li span{
+	display: block;
+	overflow: hidden;
+}
+.product-content ul li span img{
+	width: 100%;
+	float: left;
+}
+.product-content ul li p{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.product-content-details{
+	width: 1200px;
+	min-width: 1200px;
+	margin: 0 auto;
+}
+.product-content-details .title{
+	color: #333333;
+	overflow: hidden;
+	line-height: 82px;
+}
+.product-content-details h1{
+	font-size: 22px;
+	float: left;
+	font-weight: normal;
+}
+.product-content-details .content .technology{
+	border-bottom: 1px dashed #e5e5e5;
+	padding-bottom: 30px;
+	overflow: hidden;
+}
+
+.product-content-details .content .product-content h4{
+	font-weight: normal;
+	line-height: 80px;
+}
+
+.product-content-details .content .technology h4{
+	font-weight: normal;
+	padding-bottom: 20px;
+}

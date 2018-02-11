@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="../../common/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../common/common.css">
+	<meta charset="utf-8">
+</head>
+<body>
+
+
+<footer>
+	<div class="contact">
+		<div class="contact-way">
+			<h6>联系我们</h6>
+			<ul>
+			</ul>
+		</div>
+		<div class="contact-code">
+			<span><img src="../../images/wx_code.jpg" alt=""></span>
+			<p>扫一扫关注微信公众号</p>
+		</div>
+
+	</div>
+	<div class="annotation">
+		<p>Copyright © 1998 - 2017 Tencent. All Rights Reserved</p>
+		<p>腾讯公司 版权所有 粤B2-20090059  粤网文[2014]0633-233号 网络视听许可证1904073号</p>
+	</div>
+</footer>
+
+
+</body>
+</html>
+<script src="../../libs/jquery.js"></script>
+<script src="../../common/public.js"></script>
+<script type="text/javascript">
+
+	nDataAjax( url+"chengtou/api/contact/GetList" , "get"  ,function( data ){
+
+		if( data.status == 0 )
+		{
+
+			if( data.data[0].c_tel != null )
+			{
+				$('.contact-way ul').append(`<li>电话：${data.data[0].c_tel}</li>`)
+			}
+			if( data.data[0].c_phone != null )
+			{
+				$('.contact-way ul').append(`<li>电话：${data.data[0].c_phone}</li>`)
+			}
+			if( data.data[0].c_email != null )
+			{
+				$('.contact-way ul').append(`<li>电话：${data.data[0].c_email}</li>`)
+			}
+			if( data.data[0].c_address != null )
+			{
+				$('.contact-way ul').append(`<li>电话：${data.data[0].c_address}</li>`)
+			}
+			if( data.data[0].c_qq != null )
+			{
+				$('.contact-way ul').append(`<li>电话：${data.data[0].c_qq}</li>`)
+			}
+		}
+
+	})
+
+
+</script>
